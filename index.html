@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="miApp">
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Peliculas y Series</title>
+		<script src="vendor/angular.min.js"></script>
+		<script src="vendor/angular-route.min.js"></script>
+		<script src="vendor/angular-route-segment.js"></script>
+		<script src="vendor/angular-locale_es-es.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/PeliculasCtrl.js"></script>
+		<script src="scripts/controllers/SeriesCtrl.js"></script>
+		<script src="scripts/controllers/NavegacionCtrl.js"></script>
+		<script src="scripts/controllers/PeliculasProximamenteCtrl.js"></script>
+		<script src="scripts/controllers/PeliculasCarteleraCtrl.js"></script>
+		<script src="scripts/controllers/SeriesHoyCtrl.js"></script>
+		<script src="scripts/controllers/SeriesEmisionCtrl.js"></script>
+		<script src="scripts/controllers/PeliculaDetallesCtrl.js"></script>
+		<script src="scripts/services/ApiService.js"></script>
+		<script src="scripts/Values/Settings.js"></script>
+		<script src="scripts/filters/FechaEstreno.js"></script>
+		<script src="scripts/directives/MediaItems.js"></script>
+		<script src="scripts/directives/Votacion.js"></script>
+		<script src="scripts/directives/Generos.js"></script>
+		<link rel="stylesheet" href="styles/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+	<h1>Películas y Series</h1>
+
+</header>
+<nav ng-controller="NavegacionCtrl">
+	<ul class="nav nav-tabs">
+	  <li ng-class="{ 'active': rutaEsPeliculas() }">
+	  	<a href="#/peliculas">Peliculas</a>
+	  </li>
+	  <li ng-class="{ 'active': rutaEsSeries() }">
+	  	<a href="#/series">Series</a>
+	  </li>
+	</ul>
+</nav>
+
+<section app-view-segment="0"></section>
+</div>
+
+
+</body>
+</html>

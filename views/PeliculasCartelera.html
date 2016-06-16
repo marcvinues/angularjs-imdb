@@ -1,0 +1,17 @@
+
+<table class="table table-striped">
+	
+	<tbody>
+		<!--<tr ng-repeat="pelicula in peliculas | orderBy:'-title'">
+			<td><img src="http://image.tmdb.org/t/p/w150{{ pelicula.poster_path }}"></td>
+			<td>{{ pelicula.title }}</td>
+				<td>{{ pelicula.release_date | date:'dd/MM/yyyy'}}</td>
+		</tr>-->
+		<tr ng-repeat="pelicula in peliculas" media-item datos="pelicula" al-seleccionar="verDetalle(mediaId)"></tr>
+	</tbody>
+</table>
+
+
+	
+
+
